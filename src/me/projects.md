@@ -4,4 +4,6 @@ subtitle: "some projects im undertaking"
 date: "2024-11-21"
 ---
 
-- no seriously i need to create serious projects
+- [Vista.et](https://vista.et)
+  - Notion + Perplexity for YouTube
+  - Doing to YouTube what Perplexity did to Search
