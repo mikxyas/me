@@ -1,3 +1,5 @@
+// @ts-no-check
+
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
@@ -6,10 +8,15 @@ import Prose from "@/components/typography/prose-typography";
 type Context = {
   params: {
     slug: string;
+    reason: string | null;
+    status: string;
+    value: string;
   };
+  searchParams: URLSearchParams;
 };
 
 export default function AboutME(context: Context) {
+  console.log(context);
   // @ts-expect-error idgaf
 
   const slug = React.use(context.params).slug;
