@@ -13,11 +13,11 @@ import {
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {
-  const folder = "./src/cms";
+  const folder = "./cms";
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
   const posts = markdownPosts.map((filename) => {
-    const fileContents = fs.readFileSync(`./src/cms/${filename}`, "utf-8");
+    const fileContents = fs.readFileSync(`./cms/${filename}`, "utf-8");
     const matterResult = matter(fileContents);
     return {
       title: matterResult.data.title,
@@ -27,11 +27,11 @@ export function AppSidebar() {
     };
   });
 
-  const meFolder = "./src/me";
+  const meFolder = "./me";
   const meFiles = fs.readdirSync(meFolder);
   const meMarkdownPosts = meFiles.filter((file) => file.endsWith(".md"));
   const mePosts = meMarkdownPosts.map((filename) => {
-    const fileContents = fs.readFileSync(`./src/me/${filename}`, "utf-8");
+    const fileContents = fs.readFileSync(`./me/${filename}`, "utf-8");
     const matterResult = matter(fileContents);
     return {
       title: matterResult.data.title,
