@@ -10,7 +10,7 @@ export default function AboutME(context) {
   // @ts-expect-error idgaf
   const slug = React.use(context.params).slug;
 
-  const essayFolder = `./me`;
+  const essayFolder = `./public/me`;
   const essayFile = `${essayFolder}/${slug}` + ".md";
 
   const Lcontent = fs.readFileSync(essayFile, "utf8");
